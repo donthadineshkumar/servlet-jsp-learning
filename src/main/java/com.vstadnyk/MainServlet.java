@@ -39,6 +39,9 @@ public class MainServlet extends HttpServlet {
 
         Database database = (Database) servletContext.getAttribute("database");
 
+        servletContext.removeAttribute("attr");
+        servletContext.setAttribute("attr", System.currentTimeMillis());
+
         resp.setContentType("text/html");
         PrintWriter writer = resp.getWriter();
         writer.append("host is ");

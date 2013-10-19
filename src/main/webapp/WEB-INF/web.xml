@@ -3,6 +3,16 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
+
+
+    <display-name>Archetype Created Web Application</display-name>
+    <listener>
+        <listener-class>com.vstadnyk.listener.MyServletInitialisedListener</listener-class>        
+    </listener>
+    <listener>
+        <listener-class>com.vstadnyk.listener.MyAttributeListener</listener-class>
+    </listener>
+
     <context-param>
         <param-name>host</param-name>
         <param-value>localhost</param-value>
@@ -12,11 +22,6 @@
         <param-name>ip</param-name>
         <param-value>127.0.0.1</param-value>
     </context-param>
-
-    <display-name>Archetype Created Web Application</display-name>
-    <listener>
-        <listener-class>com.vstadnyk.listener.MyServletInitialisedListener</listener-class>
-    </listener>
 
     <servlet>
         <servlet-name>Main Servlet</servlet-name>
